@@ -53,6 +53,7 @@ def setup_alsa(ns):
     ns['py_modules'].append('midi.sequencer.sequencer_alsa')
     ns['ext_package'] = 'midi.sequencer'
     ns['cmdclass'] = {'install': Install_Command_build_ext_first}
+    ns['python_requires'] = '==2.7,>=3.4,<=3.7'  # Only tested on up to 3.7
 
 def configure_platform():
     from sys import platform
